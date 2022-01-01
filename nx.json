@@ -6,6 +6,7 @@
     "defaultCollection": "@nrwl/angular",
     "packageManager": "yarn"
   },
+  "defaultProject": "setup-angular",
   "generators": {
     "@nrwl/angular:application": {
       "e2eTestRunner": "cypress",
