@@ -1,15 +1,16 @@
 {
   "name": "setup-angular",
+  "private": true,
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "ng": "nx",
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main",
-    "start": "nx serve",
     "build": "nx build",
+    "ng": "nx",
+    "nx": "nx",
+    "start": "nx serve",
     "test": "nx test"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "~13.1.0",
     "@angular/common": "~13.1.0",
@@ -37,8 +38,10 @@
     "@nrwl/eslint-plugin-nx": "13.4.1",
     "@nrwl/jest": "13.4.1",
     "@nrwl/linter": "13.4.1",
+    "@nrwl/node": "13.4.1",
     "@nrwl/tao": "13.4.1",
     "@nrwl/workspace": "13.4.1",
+    "@schematics/angular": "~13.1.0",
     "@types/jest": "27.0.2",
     "@types/node": "14.14.33",
     "@typescript-eslint/eslint-plugin": "~5.3.0",
