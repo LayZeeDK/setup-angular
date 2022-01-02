@@ -2,6 +2,8 @@
 
 # compiled output
 /dist
+!/dist/cleanup/
+!/dist/setup/
 /tmp
 /out-tsc
 
