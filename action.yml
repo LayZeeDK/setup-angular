@@ -5,14 +5,16 @@ inputs:
   angular-version:
     description: 'Version spec of the Angular version to use. Examples: 12, 12.x, 12.0, 12.0.x'
     required: true
-  check-latest:
-    default: 'false'
-    description: 'Set this option if you want the action to check for the latest available version that satisfies the version spec'
-    required: false
-  package-file:
-    default: 'package.json'
-    description: 'File containing the dependencies to configure. Examples: package.json, frontend/package.json'
-    required: false
+  # check-latest:
+  #   default: 'false'
+  #   description: 'Set this option if you want the action to check for the latest available version that satisfies the version spec'
+  #   required: false
+  # package-file:
+  #   default: 'package.json'
+  #   description: 'File containing the dependencies to configure. Examples: package.json, frontend/package.json'
+  #   required: false
 runs:
-  using: 'node16'
-  main: 'dist/setup/index.js'
+  using: 'docker'
+  image: 'build/setup-angular/Dockerfile'
+  args:
+    - '${{ inputs.angular-version }}'

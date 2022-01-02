@@ -2,8 +2,7 @@
 
 # compiled output
 /dist
-!/dist/cleanup/
-!/dist/setup/
+!/dist/packages/setup-angular
 /tmp
 /out-tsc
 
