@@ -8,7 +8,7 @@
     "build": "nx build",
     "docker:build": "docker build ./ --file ./build/setup-angular/Dockerfile --tag setup-angular:local",
     "docker:start": "docker run setup-angular:local",
-    "docker:nx-plugin:build": "docker build ./build/nx-plugin --tag nx-plugin:local",
+    "docker:nx-plugin:build": "docker build ./build/nx-plugin --tag nx-plugin:local --shm-size 512M",
     "ng": "nx",
     "nx": "nx",
     "start": "nx serve",
